@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/index.css" />
+		<script type="text/javascript" src="./js/base.js"></script>
+		<script type="text/javascript" src="./js/index.js"></script>
+		<script>
+			var pixclPatio = 1 / window.devicePixelRatio;
+			document.write('<meta name="viewport" content="width=device-width,initial-scale='+pixclPatio+',minimum-scale='+pixclPatio+',maximum-scale='+pixclPatio+',user-scalable=no" />');
+			
+			var html = document.getElementsByTagName('html')[0];
+			var pageWidth = html.getBoundingClientRect().width;
+			html.style.fontSize = pageWidth / 16 + 'px';
+
+		</script>
+		<!--
+			1、[固定定位]元素内容中有[input]的话，会导致触发键盘之后导致固定定位错位。
+			2、不管使用背景图还是img，一定要调整对应的size（大小）
+				如果图片大小和容器大小一致，那么可以使用100%
+				如果图片大小和容器带下不一样，那么需针对图片分别设置宽/高、x/y
+			3、碰到文字，一定要测量行高，不然高度会不准确
+			4、标签的特性需要熟记于心
+		-->
+	</head>
+	<body>
+		<!-- 头部搜索版块 -->
+		<header class="head_box">
+			<a href="" class="btn_type"></a>
+			<div class="search_box">
+				<form action="" class="search_form">
+					<!--<i class="ico-search"></i>-->
+					<input type="text" class="search_input" placeholder="荣耀4X最后"/>
+				</form>
+			</div>
+			<a href="" class="shop_car"></a>
+		</header>
+
+		<!-- banner轮播图版块 -->
+		<section class="wrap">
+			<div class="banner">
+				<ul class="list">
+					<li>
+						<a href="#">
+							<img src="img/banner/ban1.jpg" alt="" />
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/banner/ban2.jpg" alt="" />
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/banner/ban3.jpg" alt="" />
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/banner/ban4.jpg" alt="" />
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/banner/ban5.jpg" alt="" />
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/banner/ban6.jpg" alt="" />
+						</a>
+					</li>
+				</ul>
+				<ol>
+					<li class="active"></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ol>
+			</div>
+				
+			</ul>
+
+			<!-- nav导航板块 -->
+			<nav class="nav clearfix">
+				<a href="" class="nav_item">
+					<img src="img/nav/1.gif" alt="" />
+					<strong class="nav_title">大聚惠</strong>
+				</a>
+				<a href="" class="nav_item">
+					<img src="img/nav/2.gif" alt="" />
+					<strong class="nav_title">大聚惠</strong>
+				</a>
+				<a href="" class="nav_item">
+					<img src="img/nav/3.gif" alt="" />
+					<strong class="nav_title">大聚惠</strong>
+				</a>
+				<a href="" class="nav_item">
+					<img src="img/nav/4.gif" alt="" />
+					<strong class="nav_title">大聚惠</strong>
+				</a>
+				<a href="" class="nav_item">
+					<img src="img/nav/5.gif" alt="" />
+					<strong class="nav_title">大聚惠</strong>
+				</a>
+				<a href="" class="nav_item">
+					<img src="img/nav/6.gif" alt="" />
+					<strong class="nav_title">大聚惠</strong>
+				</a>
+				<a href="" class="nav_item">
+					<img src="img/nav/7.gif" alt="" />
+					<strong class="nav_title">大聚惠</strong>
+				</a>
+				<a href="" class="nav_item">
+					<img src="img/nav/8.gif" alt="" />
+					<strong class="nav_title">大聚惠</strong>
+				</a>
+				<a href="" class="nav_item">
+					<img src="img/nav/9.gif" alt="" />
+					<strong class="nav_title">大聚惠</strong>
+				</a>
+				<a href="" class="nav_item">
+					<img src="img/nav/10.gif" alt="" />
+					<strong class="nav_title">大聚惠</strong>
+				</a>
+			</nav>
+			<div class="suning_tt">
+				<div class="tt_title"></div>
+				<div class="tt_line"></div>
+				<div class="tt_list">
+					<a href="" class="item">
+						app新上线，快来抢沙发。。
+					</a>
+					<a href="" class="item">
+						华为X4，新品上线...
+					</a>
+				</div>
+			</div>
+
+			<!-- ad 广告模块 -->
+			<div class="shoping_type">
+				<div class="type_top">
+					<a href="" class="big_img">
+						<img src="img/ad/ad_1.jpg" alt="" />
+					</a>
+					<a href="" class="sub_img">
+						<img src="img/ad/ad_2.jpg" alt="" />
+					</a>
+					<a href="" class="sub_img">
+						<img src="img/ad/ad_3.jpg" alt="" />
+					</a>
+				</div>
+				<div class="type_bottom clearfix">
+					<a href="" class="bottom_item">
+						<img src="img/ad/ad_4.jpg" alt="" />
+					</a>
+					<a href="" class="bottom_item">
+						<img src="img/ad/ad_5.jpg" alt="" />
+					</a>
+					<a href="" class="bottom_item">
+						<img src="img/ad/ad_6.jpg" alt="" />
+					</a>
+					<a href="" class="bottom_item">
+						<img src="img/ad/ad_7.jpg" alt="" />
+					</a>
+					<a href="" class="bottom_item">
+						<img src="img/ad/ad_8.jpg" alt="" />
+					</a>
+					<a href="" class="bottom_item">
+						<img src="img/ad/ad_9.jpg" alt="" />
+					</a>
+					<a href="" class="bottom_item">
+						<img src="img/ad/ad_10.jpg" alt="" />
+					</a>
+					<a href="" class="bottom_item">
+						<img src="img/ad/ad_11.jpg" alt="" />
+					</a>
+				</div>
+			</div>
+
+			<!-- 抢购模块 -->
+			<div class="suning_qg">
+				<header class="head">
+					<div class="head_left">
+						<h3 class="title"></h3>
+						<div class="time_box">
+							<span class="time_name">
+								距离1212还剩余
+							</span>
+							<div id="updeta_time" class="updeta_time">
+								<span class="time_item"></span>
+								<span class="time_ico">天</span>
+								<span class="time_item"></span>
+								<span class="time_ico">:</span>
+								<span class="time_item"></span>
+								<span class="time_ico">:</span>
+								<span class="time_item tips"></span>
+							</div>
+						</div>
+					</div>
+					<div class="head_right">
+						<a href="" class="more">
+							吃货上新季
+						</a>
+						<i class="ico_more"></i>
+					</div>
+				</header>
+				<div class="shoping_box">
+					<ul class="shoping_list">
+						<li class="list_item">
+							<a href="" class="item_img">
+								<img src="img/shoping-4.jpg" alt="" />
+							</a>
+							<div class="item_bottom">
+								<strong class="jiage">￥15.90</strong>
+								<del class="yuanjia">￥50.90</del>
+								<div class="zhekou">
+									<span class="big_font">5.<span>8折</span></span>
+								</div>
+							</div>
+						</li>
+						<li class="list_item">
+							<a href="" class="item_img">
+								<img src="img/shoping-4.jpg" alt="" />
+							</a>
+							<div class="item_bottom">
+								<strong class="jiage">￥15.90</strong>
+								<del class="yuanjia">￥50.90</del>
+								<div class="zhekou">
+									<span class="big_font">5.<span>8折</span></span>
+								</div>
+							</div>
+						</li>
+						<li class="list_item">
+							<a href="" class="item_img">
+								<img src="img/shoping-4.jpg" alt="" />
+							</a>
+							<div class="item_bottom">
+								<strong class="jiage">￥15.90</strong>
+								<del class="yuanjia">￥50.90</del>
+								<div class="zhekou">
+									<span class="big_font">5.<span>8折</span></span>
+								</div>
+							</div>
+						</li>
+						<li class="list_item">
+							<a href="" class="item_img">
+								<img src="img/shoping-4.jpg" alt="" />
+							</a>
+							<div class="item_bottom">
+								<strong class="jiage">￥15.90</strong>
+								<del class="yuanjia">￥50.90</del>
+								<div class="zhekou">
+									<span class="big_font">5.<span>8折</span></span>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+		</section>
+	</body>
+</html>

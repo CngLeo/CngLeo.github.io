@@ -1,0 +1,11 @@
+
+专属IE9 、IE8的滤镜 
+
+-ms-filter：progidDXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=red, endColorstr=yellow);
+
+
+/* 
+	startColorstr=red	开头渐变颜色
+	
+	endColorstr=yellow	结尾渐变颜色
+ */
