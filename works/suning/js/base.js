@@ -1,7 +1,8 @@
-/*
- *author：Leo
+﻿/*
+ *author : Leo
+ *date : 2016/10/3
 */
-function CountDown(option){
+function CountDown(option){	//倒计时构造函数
 	this._init(option);
 }
 
@@ -40,22 +41,65 @@ CountDown.prototype = {
 	}
 }
 
-function getByClass(oParent, sClass)
-{
- var aEle=oParent.getElementsByTagName('*');
- var aResult=[];
- var re=new RegExp('\\b'+sClass+'\\b', 'i');
- var i=0;
- 
- for(i=0;i<aEle.length;i++)
- {
-  //if(aEle[i].className==sClass)
-  //if(aEle[i].className.search(sClass)!=-1)
-  if(re.test(aEle[i].className))
-  {
-   aResult.push(aEle[i]);
-  }
- }
- 
- return aResult;
+function getByClass(oParent, sClass){	//获取Class元素（获取集合）
+	 var aEle=oParent.getElementsByTagName('*');
+	 var aResult=[];
+	 var re=new RegExp('\\b'+sClass+'\\b', 'i');
+	 var i=0;
+	 
+	 for(i=0;i<aEle.length;i++)
+	 {
+		  //if(aEle[i].className==sClass)
+		  //if(aEle[i].className.search(sClass)!=-1)
+		  if(re.test(aEle[i].className))
+		  {
+		   aResult.push(aEle[i]);
+		  }
+	 }
+ 	return aResult;
+}
+
+function id(id){	//获取id
+	return document.getElementById(id);
+}
+
+function view(){	//获取屏幕的宽高值
+	return {
+		w : document.documentElement.clientWidth,
+		h : document.documentElement.clientHeight
+	}
+}
+
+function bind(obj, ev, fn){		//封装绑定事件
+	if(obj.addEventListener){
+		return obj.addEventListener(ev, fn, false);
+	}else{
+		return obj.attachEvent('on'+ev, function(){
+			fn.call(obj);
+		});
+	}
+}
+
+function addClass(obj, sClass){  //添加Class
+	var aClass = obj.className.split(' ');
+	if(!obj.className){
+		obj.className = sClass;
+		return false;
+	}
+	for(var i=0; i<aClass.length; i++){
+		if(aClass[i] === sClass) return false;
+	}
+	obj.className += ' ' + sClass;
+}
+
+function removeClass(obj, sClass){  //删除Class
+	var aClass = obj.className.split(' ');
+	if(!obj.className) return false;
+	for(var i=0; i<aClass.length; i++){
+		if(aClass[i] === sClass){
+			aClass.splice(i, 1);
+			obj.className = aClass.join(' ');
+			break;
+		}
+	}
 }
