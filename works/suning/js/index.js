@@ -65,7 +65,6 @@ function fnTab(){
 		var touchList = ev.changedTouches[0];
 		startPageX = touchList.pageX;
 		iStartX = iX;
-
 	}
 
 	function fnMove(ev){
@@ -79,7 +78,6 @@ function fnTab(){
 	function fnEnd(){
 		iNow = iX/iw;
 		iNow = -Math.round(iNow);
-		//console.log(iNow);
 
 		if(iNow<0){
 			iNow=0;
@@ -90,3 +88,4 @@ function fnTab(){
 		autoPlay();
 	}
 }
+
